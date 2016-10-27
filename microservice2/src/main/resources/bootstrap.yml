@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: yonose
+eureka:
+  client:
+    register-with-eureka: true
+    enabled: true
+    fetch-registry: true
+

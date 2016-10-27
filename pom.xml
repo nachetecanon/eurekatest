@@ -4,6 +4,7 @@
 	<modules>
 		<module>eurekaserver</module>
         <module>microservice</module>
+        <module>microservice2</module>
     </modules>
 	<parent>
 		<!-- Your own application should inherit from spring-boot-starter-parent -->

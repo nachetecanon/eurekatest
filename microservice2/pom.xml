@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <description>Microservicio de prueba</description>
-    <artifactId>microservice</artifactId>
+    <artifactId>microservice2</artifactId>
 
     <dependencies>
         <dependency>
