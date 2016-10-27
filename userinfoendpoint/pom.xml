@@ -8,9 +8,9 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <description>Microservicio de prueba</description>
-    <artifactId>microservice2</artifactId>
 
+    <artifactId>userinfoendpoint</artifactId>
+    <description>User info endpoint</description>
     <dependencies>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
@@ -18,9 +18,7 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-eureka-server</artifactId>
-            <scope>test</scope>
+            <artifactId>spring-cloud-starter-feign</artifactId>
         </dependency>
     </dependencies>
-
 </project>

@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: mainclient
+eureka:
+  client:
+    register-with-eureka: true
+    enabled: true
+    fetch-registry: true
+

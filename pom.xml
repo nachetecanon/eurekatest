@@ -5,6 +5,7 @@
 		<module>eurekaserver</module>
         <module>microservice</module>
         <module>microservice2</module>
+        <module>userinfoendpoint</module>
     </modules>
 	<parent>
 		<!-- Your own application should inherit from spring-boot-starter-parent -->
@@ -33,6 +34,11 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.assertj</groupId>
+			<artifactId>assertj-core</artifactId>
+			<scope>test</scope>
+		</dependency>
 	</dependencies>
     <dependencyManagement>
         <dependencies>
@@ -43,6 +49,12 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+			<dependency>
+				<groupId>org.assertj</groupId>
+				<artifactId>assertj-core</artifactId>
+				<version>3.5.2</version>
+				<scope>test</scope>
+			</dependency>
         </dependencies>
     </dependencyManagement>
 	<build>
