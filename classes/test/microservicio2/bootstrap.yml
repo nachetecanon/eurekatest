@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: microservice2test
+eureka:
+  client:
+    register-with-eureka: false
+    enabled: false
+    fetch-registry: false
+

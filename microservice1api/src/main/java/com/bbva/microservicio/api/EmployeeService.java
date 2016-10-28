@@ -1,5 +1,6 @@
 package com.bbva.microservicio.api;
 
+import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -8,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 /**
  * Created by icanon on 28/10/16.
  */
+@FeignClient("tusabras")
 public interface EmployeeService {
     String NAME_URI_BASE = "/employee/name";
     String EMAIL_URI_BASE = "/employee/email";
