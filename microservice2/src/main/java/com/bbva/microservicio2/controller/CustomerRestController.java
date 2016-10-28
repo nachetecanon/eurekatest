@@ -1,7 +1,7 @@
 package com.bbva.microservicio2.controller;
 
+import com.bbva.microservice2.api.CustomerService;
 import com.bbva.microservicio2.repo.CustomerRepository;
-import com.bbva.microservicio2.api.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Optional;
+
+
 
 /**
  * Created by icanon on 25/10/16.

@@ -1,7 +1,7 @@
 package com.bbva.microservice2.test;
 
+import com.bbva.microservice2.api.CustomerService;
 import com.bbva.microservice2.test.helper.TestHelper;
-import com.bbva.microservicio2.api.CustomerService;
 import com.bbva.microservicio2.repo.CustomerRepository;
 import org.junit.Before;
 import org.junit.Test;

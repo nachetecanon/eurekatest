@@ -1,17 +1,17 @@
-package com.bbva.microservicio.model;
+package com.bbva.microservice2.api.model;
 
 import java.util.Objects;
 
 /**
- * Created by icanon on 26/10/16.
+ * Created by icanon on 27/10/16.
  */
-public class Employee {
+public class Customer {
     private String userId;
     private String name;
     private String phone;
     private String email;
 
-    public Employee(String userId, String name, String phone, String email) {
+    public Customer(String userId, String name, String phone, String email) {
         this.userId = userId;
         this.name = name;
         this.phone = phone;
@@ -38,11 +38,11 @@ public class Employee {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Employee employee = (Employee) o;
-        return Objects.equals(userId, employee.userId) &&
-                Objects.equals(name, employee.name) &&
-                Objects.equals(phone, employee.phone) &&
-                Objects.equals(email, employee.email);
+        Customer customer = (Customer) o;
+        return Objects.equals(userId, customer.userId) &&
+                Objects.equals(name, customer.name) &&
+                Objects.equals(phone, customer.phone) &&
+                Objects.equals(email, customer.email);
     }
 
     @Override

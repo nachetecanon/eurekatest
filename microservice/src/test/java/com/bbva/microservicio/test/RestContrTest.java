@@ -1,6 +1,6 @@
 package com.bbva.microservicio.test;
 
-import com.bbva.microservicio.controller.RestContr;
+import com.bbva.microservicio.controller.EmployeeRestController;
 import com.bbva.microservicio.repo.EmployeesRepository;
 import com.bbva.microservicio.test.helper.TestHelper;
 import org.junit.Before;
@@ -67,34 +67,34 @@ public class RestContrTest {
     @Test
     public void test_user_name_found_useCase() throws Exception {
         final String expectedName = employeesRepository.findNameByUserId("icanon");
-        call_rest_method_and_expect_result(expectedName, RestContr.NAME_URI_BASE, "icanon");
+        call_rest_method_and_expect_result(expectedName, EmployeeRestController.NAME_URI_BASE, "icanon");
     }
 
     @Test
     public void test_user_name_notFound_useCase() throws Exception {
-        call_rest_method_with_not_foundable_userid_and_expect_not_found_result(RestContr.NAME_URI_BASE);
+        call_rest_method_with_not_foundable_userid_and_expect_not_found_result(EmployeeRestController.NAME_URI_BASE);
     }
 
     @Test
     public void test_user_email_found_useCase() throws Exception {
         final String expectedEmail = employeesRepository.findEmailByUserId("icanon");
-        call_rest_method_and_expect_result(expectedEmail, RestContr.EMAIL_URI_BASE, "icanon");
+        call_rest_method_and_expect_result(expectedEmail, EmployeeRestController.EMAIL_URI_BASE, "icanon");
     }
 
     @Test
     public void test_user_email_notFound_useCase() throws Exception {
-        call_rest_method_with_not_foundable_userid_and_expect_not_found_result(RestContr.EMAIL_URI_BASE);
+        call_rest_method_with_not_foundable_userid_and_expect_not_found_result(EmployeeRestController.EMAIL_URI_BASE);
     }
 
     @Test
     public void test_user_phone_found_useCase() throws Exception {
         final String expectedPhone = employeesRepository.findPhoneByUserId("icanon");
-        call_rest_method_and_expect_result(expectedPhone, RestContr.PHONE_URI_BASE, "icanon");
+        call_rest_method_and_expect_result(expectedPhone, EmployeeRestController.PHONE_URI_BASE, "icanon");
     }
 
     @Test
     public void test_user_phone_notFound_useCase() throws Exception {
-        call_rest_method_with_not_foundable_userid_and_expect_not_found_result(RestContr.PHONE_URI_BASE);
+        call_rest_method_with_not_foundable_userid_and_expect_not_found_result(EmployeeRestController.PHONE_URI_BASE);
     }
 
 

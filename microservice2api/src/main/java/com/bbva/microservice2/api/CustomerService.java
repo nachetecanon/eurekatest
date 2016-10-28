@@ -1,6 +1,5 @@
-package com.bbva.microservicio2.api;
+package com.bbva.microservice2.api;
 
-import com.bbva.microservicio2.controller.CustomerRestController;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -19,7 +18,7 @@ public interface CustomerService {
     String PHONE_URI = PHONE_URI_BASE + "/{" + USER_ID + "}";
 
     @RequestMapping(value = NAME_URI, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-    ResponseEntity<String> retrieveNameByUserId(@PathVariable(CustomerRestController.USER_ID) String userId);
+    ResponseEntity<String> retrieveNameByUserId(@PathVariable(USER_ID) String userId);
 
     @RequestMapping(value = EMAIL_URI, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     ResponseEntity<String> retrieveEmailByUserId(@PathVariable(USER_ID) String userId);

@@ -1,6 +1,6 @@
 package com.bbva.microservicio2.repo;
 
-import com.bbva.microservicio2.model.Customer;
+import com.bbva.microservice2.api.model.Customer;
 import org.springframework.stereotype.Repository;
 
 import java.util.Optional;

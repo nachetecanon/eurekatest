@@ -6,7 +6,9 @@
         <module>microservice</module>
         <module>microservice2</module>
         <module>userinfoendpoint</module>
-    </modules>
+		<module>microservice2api</module>
+		<module>microservice1api</module>
+	</modules>
 	<parent>
 		<!-- Your own application should inherit from spring-boot-starter-parent -->
 		<groupId>org.springframework.boot</groupId>
@@ -57,12 +59,5 @@
 			</dependency>
         </dependencies>
     </dependencyManagement>
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
-	</build>
+
 </project>
