@@ -1,6 +1,6 @@
 spring:
   application:
-    name: tusabras
+    name: employeeservice
 eureka:
   client:
     register-with-eureka: true
