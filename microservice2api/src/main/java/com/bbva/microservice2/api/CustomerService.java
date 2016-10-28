@@ -1,6 +1,5 @@
 package com.bbva.microservice2.api;
 
-import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -9,7 +8,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 /**
  * Created by icanon on 27/10/16.
  */
-@FeignClient("microservice2test")
 public interface CustomerService {
     String NAME_URI_BASE = "/customer/name";
     String EMAIL_URI_BASE = "/customer/email";

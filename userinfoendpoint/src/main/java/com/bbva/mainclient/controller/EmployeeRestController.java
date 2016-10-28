@@ -1,6 +1,6 @@
 package com.bbva.mainclient.controller;
 
-import com.bbva.microservicio.api.EmployeeService;
+import com.bbva.mainclient.remoteapi.EmployeeRemoteApi;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -15,11 +15,11 @@ import org.springframework.web.bind.annotation.RestController;
 public class EmployeeRestController {
 
     @Autowired
-    private EmployeeService employeeService;
+    private EmployeeRemoteApi employeeRemoteApi;
 
     @RequestMapping(value = "/employee/name/{userId}", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     public ResponseEntity<String> getEmployeeNameByUserId(@PathVariable("userId") final String userId) {
-        return employeeService.retrieveNameByUserId(userId);
+        return employeeRemoteApi.retrieveNameByUserId(userId);
     }
 
 
