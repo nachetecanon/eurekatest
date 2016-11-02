@@ -1,6 +1,6 @@
 package com.bbva.employee.repo;
 
-import com.bbva.microservicio.api.model.Employee;
+import com.bbva.employeeservice.api.model.Employee;
 import org.springframework.stereotype.Repository;
 
 import java.util.Optional;

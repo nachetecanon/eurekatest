@@ -1,9 +1,0 @@
-spring:
-  application:
-    name: customerservice
-eureka:
-  client:
-    register-with-eureka: false
-    enabled: false
-    fetch-registry: false
-

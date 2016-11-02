@@ -1,7 +1,7 @@
 package com.bbva.employee.controller;
 
-import com.bbva.microservicio.api.EmployeeService;
 import com.bbva.employee.repo.EmployeesRepository;
+import com.bbva.employeeservice.api.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

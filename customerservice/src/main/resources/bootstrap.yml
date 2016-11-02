@@ -1,5 +1,9 @@
 spring:
   application:
-    name: yonose
+    name: customerservice
+eureka:
+  client:
+    enabled: true
+    fetch-registry: true
 
 
