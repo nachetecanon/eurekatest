@@ -8,9 +8,9 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
+    <description>Microservicio de prueba</description>
+    <artifactId>customerservice</artifactId>
 
-    <artifactId>userinfoendpoint</artifactId>
-    <description>User info endpoint</description>
     <dependencies>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
@@ -18,13 +18,8 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-feign</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>com.bbva</groupId>
-            <artifactId>employeeserviceapi</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <artifactId>spring-cloud-starter-eureka-server</artifactId>
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>com.bbva</groupId>
@@ -32,4 +27,13 @@
             <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
 </project>

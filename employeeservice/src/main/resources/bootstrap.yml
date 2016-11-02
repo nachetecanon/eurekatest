@@ -1,9 +1,3 @@
 spring:
   application:
     name: employeeservice
-eureka:
-  client:
-    register-with-eureka: true
-    enabled: true
-    fetch-registry: true
-

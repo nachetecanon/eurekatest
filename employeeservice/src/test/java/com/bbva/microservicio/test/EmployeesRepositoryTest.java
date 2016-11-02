@@ -1,6 +1,6 @@
 package com.bbva.microservicio.test;
 
-import com.bbva.microservicio.repo.EmployeesRepository;
+import com.bbva.employee.repo.EmployeesRepository;
 import com.bbva.microservicio.test.helper.TestHelper;
 import org.junit.Test;
 import org.junit.runner.RunWith;

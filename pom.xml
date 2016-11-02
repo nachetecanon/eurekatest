@@ -3,11 +3,11 @@
 	<modelVersion>4.0.0</modelVersion>
 	<modules>
 		<module>eurekaserver</module>
-        <module>microservice</module>
-        <module>microservice2</module>
+        <module>customerservice</module>
+        <module>customerserviceapi</module>
         <module>userinfoendpoint</module>
-		<module>microservice2api</module>
-		<module>microservice1api</module>
+		<module>employeeservice</module>
+		<module>employeeserviceapi</module>
 	</modules>
 	<parent>
 		<!-- Your own application should inherit from spring-boot-starter-parent -->

@@ -1,6 +1,6 @@
 spring:
   application:
-    name: microservice2test
+    name: customerservice
 eureka:
   client:
     register-with-eureka: false

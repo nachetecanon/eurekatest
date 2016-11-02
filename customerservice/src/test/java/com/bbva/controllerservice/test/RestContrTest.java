@@ -1,8 +1,8 @@
-package com.bbva.microservicio.test;
+package com.bbva.controllerservice.test;
 
-import com.bbva.employee.controller.EmployeeRestController;
-import com.bbva.employee.repo.EmployeesRepository;
-import com.bbva.microservicio.test.helper.TestHelper;
+import com.bbva.controllerservice.repo.CustomerRepository;
+import com.bbva.controllerservice.test.helper.TestHelper;
+import com.bbva.microservice2.api.CustomerService;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -17,6 +17,7 @@ import org.springframework.web.context.WebApplicationContext;
 
 import java.nio.charset.Charset;
 
+import static com.bbva.controllerservice.test.helper.TestHelper.TEST_USERID;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
@@ -41,7 +42,7 @@ public class RestContrTest {
     private WebApplicationContext wac;
 
     @Autowired
-    private EmployeesRepository employeesRepository;
+    private CustomerRepository customerRepository;
 
     @Before
     public void setup() {
@@ -66,35 +67,35 @@ public class RestContrTest {
 
     @Test
     public void test_user_name_found_useCase() throws Exception {
-        final String expectedName = employeesRepository.findNameByUserId("icanon");
-        call_rest_method_and_expect_result(expectedName, EmployeeRestController.NAME_URI_BASE, "icanon");
+        final String expectedName = customerRepository.findNameByUserId(TEST_USERID);
+        call_rest_method_and_expect_result(expectedName, CustomerService.NAME_URI_BASE, TEST_USERID);
     }
 
     @Test
     public void test_user_name_notFound_useCase() throws Exception {
-        call_rest_method_with_not_foundable_userid_and_expect_not_found_result(EmployeeRestController.NAME_URI_BASE);
+        call_rest_method_with_not_foundable_userid_and_expect_not_found_result(CustomerService.NAME_URI_BASE);
     }
 
     @Test
     public void test_user_email_found_useCase() throws Exception {
-        final String expectedEmail = employeesRepository.findEmailByUserId("icanon");
-        call_rest_method_and_expect_result(expectedEmail, EmployeeRestController.EMAIL_URI_BASE, "icanon");
+        final String expectedEmail = customerRepository.findEmailByUserId(TEST_USERID);
+        call_rest_method_and_expect_result(expectedEmail, CustomerService.EMAIL_URI_BASE, TEST_USERID);
     }
 
     @Test
     public void test_user_email_notFound_useCase() throws Exception {
-        call_rest_method_with_not_foundable_userid_and_expect_not_found_result(EmployeeRestController.EMAIL_URI_BASE);
+        call_rest_method_with_not_foundable_userid_and_expect_not_found_result(CustomerService.EMAIL_URI_BASE);
     }
 
     @Test
     public void test_user_phone_found_useCase() throws Exception {
-        final String expectedPhone = employeesRepository.findPhoneByUserId("icanon");
-        call_rest_method_and_expect_result(expectedPhone, EmployeeRestController.PHONE_URI_BASE, "icanon");
+        final String expectedPhone = customerRepository.findPhoneByUserId(TEST_USERID);
+        call_rest_method_and_expect_result(expectedPhone, CustomerService.PHONE_URI_BASE, TEST_USERID);
     }
 
     @Test
     public void test_user_phone_notFound_useCase() throws Exception {
-        call_rest_method_with_not_foundable_userid_and_expect_not_found_result(EmployeeRestController.PHONE_URI_BASE);
+        call_rest_method_with_not_foundable_userid_and_expect_not_found_result(CustomerService.PHONE_URI_BASE);
     }
 
 
